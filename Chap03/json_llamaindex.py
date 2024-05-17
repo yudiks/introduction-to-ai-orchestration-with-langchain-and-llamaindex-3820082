@@ -18,7 +18,7 @@ Return the result as JSON as follows:
 chat = OpenAILike(
     is_chat_model=True,
     is_function_calling_model=True,
-    #api_base="http://localhost:1234/v1",
+    api_base="http://localhost:1234/v1",
     temperature=0.7,
     max_tokens=500,
     model="gpt-4-1106-preview",

@@ -13,7 +13,8 @@ import os
 os.environ["BING_SEARCH_URL"] = "https://api.bing.microsoft.com/v7.0/search"
 
 llm = ChatOpenAI(
-    #base_url="http://localhost:1234/v1/",
+    api_key='lm-studio',
+    base_url="http://localhost:1234/v1/",
     temperature=0
 )
 

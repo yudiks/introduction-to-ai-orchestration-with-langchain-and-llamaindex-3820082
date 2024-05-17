@@ -20,6 +20,8 @@ def get_weather_for_city(city: str):
     return json.dumps({"city": city, "temperature": random.randint(1,50)})
 
 llm = ChatOpenAI(
+    api_key='lm-studio',
+    base_url='http://localhost:1234/v1',
     temperature=0,
     model="gpt-3.5-turbo-1106"
 )

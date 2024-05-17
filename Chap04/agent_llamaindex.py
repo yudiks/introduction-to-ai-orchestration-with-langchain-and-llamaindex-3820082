@@ -17,7 +17,8 @@ tool_list = tool_spec.to_tool_list()
 llm = OpenAILike(
     is_chat_model=True,
     model="gpt-4-1106-preview",
-    #api_base="http://localhost:1234/v1/"
+    api_key='lm-studio',
+    api_base="http://localhost:1234/v1/"
 )
 agent = ReActAgent.from_tools(tool_list, llm=llm, verbose=True)
 

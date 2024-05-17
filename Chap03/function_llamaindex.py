@@ -10,7 +10,13 @@ def get_weather_for_city(city):
     print(f"Calling local get_weather_for_city for {city}")
     return json.dumps({"city": city, "temperature": random.randint(1,50)})
 
-llm = OpenAI(model="gpt-3.5-turbo-1106")
+llm = OpenAI(
+        api_key="lm-studio",
+        is_chat_model=True,
+        api_base="http://localhost:1234/v1",  # see chapter 1 to configure local LLM
+        temperature=0.6,
+    )
+
 tool = FunctionTool.from_defaults(fn=get_weather_for_city)
 agent = OpenAIAgent.from_tools([tool], llm=llm, verbose=True)
 response = agent.chat(
