@@ -3,15 +3,17 @@ from llama_index.llms.openai_like import OpenAILike
 from llama_index.core.llms import ChatMessage
 from llama_index.core.readers import SimpleDirectoryReader
 
-application_prompt = """<insert summarization prompt here>
+application_prompt = """Summarize the following doc
 
     DOCUMENT:
 """
 
 llm = OpenAILike(
     is_chat_model=True,
+    model="local",
+    api_key="lm-studio",
+    api_base="http://localhost:1234/v1",
     temperature=0.7,
-    model="gpt-4-1106-preview"  # 128K context window
 )
 
 documents = SimpleDirectoryReader("handbook").load_data()

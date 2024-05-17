@@ -13,10 +13,12 @@ user_input = """AI Orchestration with LangChain and LlamaIndex
 
 llm = OpenAILike(
     is_chat_model=True,
-    #api_base="http://localhost:12/v1",
+    api_key="lm-studio",
+    api_base="http://localhost:1234/v1",
     temperature=0.7,
     max_tokens=500,
-    model="gpt-4-1106-preview"
+    model="TheBloke/una-cybertron-7B-v2-GGUF",
+
 )
 messages = [
     ChatMessage(role="system", content=application_prompt),

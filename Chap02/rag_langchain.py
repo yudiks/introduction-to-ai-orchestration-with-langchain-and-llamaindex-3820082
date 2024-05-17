@@ -58,6 +58,7 @@ def main():
 
     # Be sure your local model suports a large context size for this
     llm = ChatOpenAI(
+        api_key="lm-studio",
         base_url="http://localhost:1234/v1",
         temperature=0.6
     )

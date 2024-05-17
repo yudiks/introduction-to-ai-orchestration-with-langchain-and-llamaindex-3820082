@@ -33,6 +33,7 @@ def main():
 
     llm=OpenAILike(
         model="local",
+        api_key="lm-studio",
         is_chat_model=True,
         api_base="http://localhost:1234/v1",  # see chapter 1 to configure local LLM
         temperature=0.6,

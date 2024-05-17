@@ -12,7 +12,7 @@ documents = [
     Document(text="William Shakespeare married Anne Hathaway."),
 ]
 
-index = VectorStoreIndex(documents)
+index = VectorStoreIndex(documents, embed_model='local')
 query_engine = index.as_query_engine()
 response1 = query_engine.query("Who was Shakespeare's wife?")
 print(response1)

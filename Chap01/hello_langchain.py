@@ -14,10 +14,11 @@ user_input = """AI Orchestration with LangChain and LlamaIndex
     keywords: Generative AI, applications, LLM, chatbot"""
 
 llm = ChatOpenAI(
-    #base_url="http://localhost:1234/v1",
+    base_url="http://localhost:1234/v1",
+    api_key="lm-studio",
     temperature=0.7,
     max_tokens=500,
-    model='gpt-4-1106-preview'
+    model="TheBloke/una-cybertron-7B-v2-GGUF",
 )
 prompt = PromptTemplate(  
     input_variables=["user_input"],
