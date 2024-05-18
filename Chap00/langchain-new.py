@@ -8,7 +8,7 @@ from langchain_core.output_parsers.list import CommaSeparatedListOutputParser
 
 prompt_template_name = PromptTemplate(
     input_variables = ['cuisine'],
-    template = "U want to open a restaurant for {cuisine} food. Suggest a restaurant name"
+    template = "U want to open a restaurant for {cuisine} food. Suggest a restaurant name",
 )
 
 output_parser = CommaSeparatedListOutputParser()
