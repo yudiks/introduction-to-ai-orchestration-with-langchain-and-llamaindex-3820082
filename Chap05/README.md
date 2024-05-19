@@ -1,0 +1,1 @@
+https://github.com/codebasics/langchain/tree/main/2_news_research_tool_project/notebooks
